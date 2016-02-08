@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/Manage/AddPhoneNumber.cshtml" hash="3340c08c" filehash="ffffbe7e5ee9a272" flags="110000" assembly="App_Web_x5c3d1ca" type="ASP._Page_Views_Manage_AddPhoneNumber_cshtml">
+    <filedeps>
+        <filedep name="/Views/Manage/AddPhoneNumber.cshtml" />
+    </filedeps>
+</preserve>

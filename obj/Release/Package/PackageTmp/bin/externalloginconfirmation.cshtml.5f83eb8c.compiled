@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/Account/ExternalLoginConfirmation.cshtml" hash="3340c08c" filehash="ffffc01d5b36cbd0" flags="110000" assembly="App_Web_cs1ctjgh" type="ASP._Page_Views_Account_ExternalLoginConfirmation_cshtml">
+    <filedeps>
+        <filedep name="/Views/Account/ExternalLoginConfirmation.cshtml" />
+    </filedeps>
+</preserve>

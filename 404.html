@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="apple-touch-icon" sizes="57x57" href="/Images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/Images/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/Images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/Images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/Images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/Images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/Images/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/Images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/Images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/Images/manifest.json">
+    <link rel="mask-icon" href="/Images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/Images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/Images/mstile-144x144.png">
+    <meta name="msapplication-config" content="/Images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <script src="/errorScripts/jquery-1.10.2.min.js"></script>
+    <script src="/errorScripts/typed.js"></script>
+    <title>Url Not Found</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background: url('/Images/grumpy-cat-04.jpg') no-repeat top right #000;
+            background-size: 100% 100vh;
+            font-family: 'Segoe UI';
+            font-size: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .not-found-body {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            float: left;
+            color: #000;
+            background-color: #fff;
+            opacity: 0.6;
+            box-shadow: 0 -2px 2px #000;
+            text-shadow: 0 0 2px #000;
+            text-transform: uppercase;
+        }
+
+            .not-found-body span {
+                font-size: 12px;
+            }
+
+        .typed-cursor {
+            opacity: 1;
+            -webkit-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .element {
+            font-family: 'Courier New';
+            font-size: 1rem !important;
+            color: #000;
+            text-shadow: #ccc;
+            letter-spacing: 3px;
+            text-transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="not-found-body">
+        <strong>Damn you 404!</strong>
+        <br />
+        <span class="element"></span>
+        <br />
+        <a href="/" style="font-size:1rem;float:right;position:absolute;right:20px; bottom:10px;">Back home</a>
+    </div>
+    <script>
+        $(function () {
+            $(".element").typed({
+                strings: ["I get grumpy when you don't feed me what I want", "NOT FOUND - Signed, the Grumpy Cat."],
+                typeSpeed: 0,
+                startDelay: 800,
+                backSpeed: 10,
+                backDelay: 1200
+            });
+        });
+    </script>
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["setDomains", ["*.puul.ga"]]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "//analytics.zueuz.info/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', 18]);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <noscript><p><img src="//analytics.zueuz.info/piwik.php?idsite=18" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e4158b664b4b300" async="async"></script>
+</body>
+</html>

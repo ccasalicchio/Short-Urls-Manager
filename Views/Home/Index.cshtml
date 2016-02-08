@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <img src="~/Images/logo.png" alt="@MvcApplication.Website_Name" id="index-logo" />
+    <h1>@MvcApplication.Website_Name</h1>
+    <p class="lead">@MvcApplication.Website_Name is a free service that shortens urls much like bit.ly and others</p>
+    <p><a href="/Account/Register" class="btn btn-primary btn-lg">Register Free &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Url Shortening</h2>
+        <p>
+            You can shorten any url
+        </p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Click to Copy</h2>
+        <p>Once your Short Url has been created you can copy it with just one click</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Share it anywhere</h2>
+        <p>Set your expiration or have a permanent link that redirects to any site</p>
+        <p><a class="btn btn-default" href="/Account/Register">Create Account &raquo;</a></p>
+    </div>
+</div>

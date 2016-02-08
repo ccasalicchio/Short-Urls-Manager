@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns#">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no" />
+    <meta name="description" content='@MvcApplication.Website_Name is a free short url service, sign up for a free account' />
+    <meta name="keywords" content='short urls,service,free,share,small,links,redirection' />
+    <meta name="author" content='@MvcApplication.Website_Name' />
+
+    <meta property="og:title" content='@MvcApplication.Website_Name' />
+    <meta property="og:url" content='@MvcApplication.Website_Url' name="facebookurl" />
+    <meta property="og:description" content='@MvcApplication.Website_Name is a free short url service, sign up for a free account' />
+    <meta property="og:type" content='website' />
+    <meta property="og:image" content='/Images/logo.png' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/Images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/Images/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/Images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/Images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/Images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/Images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/Images/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/Images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/Images/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/Images/manifest.json">
+    <link rel="mask-icon" href="/Images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/Images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/Images/mstile-144x144.png">
+    <meta name="msapplication-config" content="/Images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>@ViewBag.Title - @MvcApplication.Website_Name</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @{
+        TempData["Success"] = TempData["Success"] == null ? "" : TempData["Success"];
+        TempData["Error"] = TempData["Error"] == null ? "" : TempData["Error"];
+    }
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="@Url.Action("Index",new { controller = "Home"})" class="navbar-brand"><img src="~/Images/puulga-logo.png" alt="Logo" style="width:24px;height:24px;" />@MvcApplication.Website_Name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Urls", "List", "Forwards")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <br />
+        <div class="alert alert-danger" style="display:@(TempData["Error"].ToString().Equals("")?"none":"block")">@TempData["Error"]</div>
+        <div class="alert alert-success" style="display:@(TempData["Success"].ToString().Equals("")?"none":"block")">@TempData["Success"]</div>
+        <br />
+        @RenderBody()
+        <br />
+        <p>Total number of Users: @MvcApplication.COUNT_USERS | Total Number of Urls: @MvcApplication.COUNT_URLS</p>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - @MvcApplication.Website_Name Short Urls  <a href="http://www.zueuz.com" target="_blank" style="float:right;"><img src="~/Images/poweredBy.png" alt="Zueuz" title="zuEuz Tecnologia e Negocios Ltda - ME" style="width:128px;" /></a></p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/custom")
+    @RenderSection("scripts", required: false)
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["setDomains", ["*.puul.ga"]]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "//analytics.zueuz.info/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', 18]);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <noscript><p><img src="//analytics.zueuz.info/piwik.php?idsite=18" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e4158b664b4b300" async="async"></script>
+
+</body>
+</html>

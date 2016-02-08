@@ -1,0 +1,64 @@
+﻿@model Shorten_Urls.Models.Url
+
+@{
+    ViewBag.Title = "Delete Url";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete Url</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Src)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Src)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Redirect)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Redirect)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Expires)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Expires)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="hidden" name="confirm" value="true" />
+            @Html.ActionLink("Back to List", "List")
+        </div>
+    }
+</div>

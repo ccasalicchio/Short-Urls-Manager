@@ -1,0 +1,114 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.copyButton {
+    cursor: pointer;
+}
+
+.avail-check {
+    position: absolute;
+    top: 5px;
+    left: 270px;
+}
+
+.available, .not-available {
+    display: none;
+}
+
+#Src {
+    padding-right: 20px;
+}
+
+.table th {
+    background: #000;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #e3e9e9;
+}
+
+.table td:nth-child(6) a {
+    font-size: 1.2rem;
+    width: 100%;
+    float: left;
+}
+
+#index-logo {
+    float: left;
+    margin: -30px 20px 0 -30px;
+}
+
+@media screen and (max-width:780px) {
+    .table th {
+        display: none;
+    }
+
+    .table td {
+        display: block;
+        border: none !important;
+        line-height: 14px;
+    }
+
+        .table td:nth-child(6) a {
+            float: left;
+            margin-right: 5px;
+            width: auto !important;
+        }
+
+            .table td:nth-child(6) a:after {
+                content: "|";
+                margin: 0 10px;
+            }
+
+        .table td:nth-child(1):before {
+            content: 'Link';
+        }
+
+        .table td:nth-child(2):before {
+            content: 'Redirects to: ';
+        }
+
+        .table td:nth-child(3):before {
+            content: 'Created by: ';
+        }
+
+        .table td:nth-child(4):before {
+            content: 'Created On: ';
+        }
+
+        .table td:nth-child(5):before {
+            content: 'Expires on: ';
+        }
+
+    .table tr {
+        border-bottom: 1px dotted #ccc;
+    }
+}
