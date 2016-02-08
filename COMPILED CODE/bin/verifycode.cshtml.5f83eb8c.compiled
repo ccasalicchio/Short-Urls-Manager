@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/Account/VerifyCode.cshtml" hash="3340c08c" filehash="ffffdf2bf7f41c0e" flags="110000" assembly="App_Web_ap25ixji" type="ASP._Page_Views_Account_VerifyCode_cshtml">
+    <filedeps>
+        <filedep name="/Views/Account/VerifyCode.cshtml" />
+    </filedeps>
+</preserve>

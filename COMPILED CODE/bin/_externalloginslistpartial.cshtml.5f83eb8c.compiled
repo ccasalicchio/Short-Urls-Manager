@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/Account/_ExternalLoginsListPartial.cshtml" hash="3340c08c" filehash="455c177f452a" flags="110000" assembly="App_Web_ap25ixji" type="ASP._Page_Views_Account__ExternalLoginsListPartial_cshtml">
+    <filedeps>
+        <filedep name="/Views/Account/_ExternalLoginsListPartial.cshtml" />
+    </filedeps>
+</preserve>
