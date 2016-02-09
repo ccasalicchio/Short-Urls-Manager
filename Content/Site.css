@@ -75,6 +75,8 @@ textarea {
         display: block;
         border: none !important;
         line-height: 14px;
+        word-wrap: break-word;
+		word-break: break-all;
     }
 
         .table td:nth-child(6) a {
