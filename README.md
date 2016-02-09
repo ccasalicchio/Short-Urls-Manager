@@ -5,6 +5,10 @@ The website is designed as a free service that shortens urls much like bit.ly an
 
 It redirects simple urls to full urls.
 
+[Visit the Project Page](http://www.zueuz.com/en-us/projects/puulga-short-urls/)
+
+[Visit the Live website](http://puul.ga)
+
 ###Make sure to change the web.config to include your settings:
 
 *AppSettings*
